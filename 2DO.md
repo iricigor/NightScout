@@ -13,3 +13,4 @@
 - Add swagger info (convert yaml to markdown)
 - Add recommended VS Code extensions
 - Add graphs - daily in range, values over last few hours
+- Add icons

@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "yzhang.markdown-all-in-one",
-        "ms-vscode.powershell"
+        "ms-vscode.powershell",
+        "streetsidesoftware.code-spell-checker"
     ]
 }

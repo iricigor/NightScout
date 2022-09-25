@@ -8,6 +8,6 @@ function Get-BGValues () {
     $Response = CallAPI "/api/v1/entries?count=$Count"
 
     # return value
-    ConvertStringToBGVRaw $Response
+    $Response | ConvertStringToBGVRaw
 
 }

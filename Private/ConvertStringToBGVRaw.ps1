@@ -1,4 +1,9 @@
-function ConvertStringToBGVRaw ([string]$Array) {
+function ConvertStringToBGVRaw () {
+
+    [CmdletBinding()]
+    param (
+        [Parameter(Mandatory,ValueFromPipeline)][string]$Array
+    )
     
     # Converts string to BGValueRaw object
 

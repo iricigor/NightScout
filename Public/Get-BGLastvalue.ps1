@@ -5,6 +5,6 @@ function Get-BGLastValue {
 
     $Response = CallAPI '/api/v1/entries?count=1'
     # return value
-    ConvertStringToBGVRaw $Response
+    $Response | ConvertStringToBGVRaw
 
 }

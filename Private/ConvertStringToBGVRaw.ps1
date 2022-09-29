@@ -20,8 +20,12 @@ function ConvertStringToBGVRaw () {
         }
 
         # return value
-        [BGValueRaw]::new(
+        $retValue = [BGValueRaw]::new(
             $Values[0],$Values[1],$Values[2],$Values[3],$Values[4]
         ) 
+        # convert to mmol/L
+        $retValue.BGValue = ConvertToMMolPerL -mgdl $retValue.BGValue
+        # return object
+        return $retValue
     }
 }

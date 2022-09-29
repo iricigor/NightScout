@@ -16,7 +16,7 @@ Class BGValueRaw {
     #
     [ValidateNotNullOrEmpty()][string]$TimeStampString
     [ValidateNotNullOrEmpty()][string]$TimeStampLong
-    [ValidateNotNullOrEmpty()][long]$BGValue
+    [ValidateNotNullOrEmpty()][decimal]$BGValue
     [ValidateNotNullOrEmpty()][string]$Description1
     [ValidateNotNullOrEmpty()][string]$Description2
 

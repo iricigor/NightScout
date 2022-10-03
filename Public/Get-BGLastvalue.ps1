@@ -3,8 +3,8 @@ function Get-BGLastValue {
     param()
     # GetLastEntry
 
-    $Response = CallAPI '/api/v1/entries?count=1'
+    $Response = CallAPI '/api/v1/entries.json?count=1'
     # return value
-    $Response | ConvertStringToBGVRaw
+    $Response | ConvertFrom-Json
 
 }

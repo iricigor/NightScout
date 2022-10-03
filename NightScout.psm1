@@ -17,5 +17,13 @@ foreach ($file in Get-ChildItem -Path ./Public -Filter *.ps1 -Recurse) {
     . $file.FullName
 }
 
+Write-Host "`nCreating module configuration.."
+if (!$script:BG) {
+    $script:BG = [PSCustomObject]@{
+        Server = ""
+        APIKey = ""
+    }
+}
+
 Export-ModuleMember -Function $PublicFunctions.BaseName
 Pop-Location

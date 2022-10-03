@@ -5,9 +5,8 @@ function Get-BGValues () {
         [Parameter(Mandatory)][int]$Count
     )
 
-    $Response = CallAPI "/api/v1/entries?count=$Count"
+    $Response = CallAPI "/api/v1/entries.json?count=$Count"
 
     # return value
-    $Response | ConvertStringToBGVRaw
-
+    $Response | ConvertFrom-Json
 }

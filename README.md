@@ -9,3 +9,19 @@ Import-Module ./Nightscout.psm1
 Set-BGServer https://myserver.domain:port
 Get-BGLastValue -Verbose
 ```
+
+## List of commands
+
+### Blood Glucose management
+- Get-BGLastValue
+- Get-BGValues
+
+### Configuration management
+- Get-BGConfig
+- Set-BGServer
+- Set-BGAPIKey
+
+### Nightscout Server status
+- Get-BGServerStatus
+- Get-BGServerSettings
+

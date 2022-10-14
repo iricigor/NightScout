@@ -4,5 +4,5 @@ function Get-BGConfig {
     param()
     # GetBGConfig
 
-    $BG
+    $Script:BGConfig
 }

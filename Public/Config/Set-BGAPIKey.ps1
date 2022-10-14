@@ -8,9 +8,9 @@ function Set-BGAPIKey {
         $APIKey = Read-Host -Prompt "API Key" -AsSecureString
     }
 
-    if ($BG.APIKey -and $BG.APIKey -ne $APIKey) {
-        Write-Warning 'Overriding BG API Key setting with new value'
+    if ($BGConfig.APIKey -and $BGConfig.APIKey -ne $APIKey) {
+        Write-Warning 'Overriding BGConfig API Key setting with new value'
     }
 
-    $BG.APIKey = $APIKey
+    $BGConfig.APIKey = $APIKey
 }

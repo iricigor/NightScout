@@ -5,8 +5,8 @@ function Set-BGServer {
         [Parameter(Mandatory)][string]$ServerName
     )
 
-    if ($BG.Server -and $BG.Server -ne $ServerName) {
-        Write-Warning "Overriding BG Server setting '$($script:BG.Server)' with '$ServerName'"
+    if ($BGConfig.Server -and $BGConfig.Server -ne $ServerName) {
+        Write-Warning "Overriding BGConfig Server setting '$($script:BGConfig.Server)' with '$ServerName'"
     }
-    $BG.Server = $ServerName
+    $BGConfig.Server = $ServerName
 }

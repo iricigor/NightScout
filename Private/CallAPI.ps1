@@ -1,16 +1,16 @@
 function CallAPI ([string]$suffix) {
 
-    if (!$BG.Server) {
+    if (!$BGConfig.Server) {
         throw 'Please set the server name using command Set-BGServer'
     }
 
-    $url = $BG.Server + $suffix
+    $url = $BGConfig.Server + $suffix
     Write-Verbose "Calling endpoint $url"
 
     $Headers = @{
         'Accept' = 'application/json'
         'Content-Type' = 'application/json'
-        'API-SECRET' = ConvertFrom-SecureString $BG.APIKey -AsPlainText
+        'API-SECRET' = ConvertFrom-SecureString $BGConfig.APIKey -AsPlainText
     }
 
     $Response = Invoke-WebRequest -Uri $url -Method Get -Verbose:$false -Headers $Headers 
